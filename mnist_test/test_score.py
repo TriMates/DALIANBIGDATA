@@ -31,14 +31,6 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--n-samples', type=int, default=64,
-                        help='Number of images and texts to sample [default: 64]')
-    # condition sampling on a particular images
-    parser.add_argument('--condition-on-image', type=int, default=None,
-                        help='If True, generate text conditioned on an image.')
-    # condition sampling on a particular text
-    parser.add_argument('--condition-on-text', type=int, default=None,
-                        help='If True, generate images conditioned on a text.')
     parser.add_argument('--cuda', action='store_true', default=False,
                         help='enables CUDA training')
     args = parser.parse_args()
